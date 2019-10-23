@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    	
+        <record id="account_invoice_discrepancy_response_code_out_refund_001" model="account.invoice.discrepancy.response.code">
+            <field name="name">Return of part of the goods; no acceptance of parts of the service</field>
+            <field name="code">1</field>
+            <field name="type">out_refund</field>
+        </record>
+
+        <record id="account_invoice_discrepancy_response_code_out_refund_002" model="account.invoice.discrepancy.response.code">
+            <field name="name">Cancellation of electronic invoice</field>
+            <field name="code">2</field>
+            <field name="type">out_refund</field>
+        </record>
+
+        <record id="account_invoice_discrepancy_response_code_out_refund_003" model="account.invoice.discrepancy.response.code">
+            <field name="name">Total reduction applied</field>
+            <field name="code">3</field>
+            <field name="type">out_refund</field>
+        </record>
+
+
+        <record id="account_invoice_discrepancy_response_code_out_refund_004" model="account.invoice.discrepancy.response.code">
+            <field name="name">Total discount applied</field>
+            <field name="code">4</field>
+            <field name="type">out_refund</field>
+        </record>
+
+
+        <record id="account_invoice_discrepancy_response_code_out_refund_005" model="account.invoice.discrepancy.response.code">
+            <field name="name">Termination: nullity due to lack of requirements</field>
+            <field name="code">5</field>
+            <field name="type">out_refund</field>
+        </record>
+
+
+        <record id="account_invoice_discrepancy_response_code_out_refund_006" model="account.invoice.discrepancy.response.code">
+            <field name="name">Others</field>
+            <field name="code">6</field>
+            <field name="type">out_refund</field>
+        </record>
+
+
+
+        <record id="account_invoice_discrepancy_response_code_in_refund_001" model="account.invoice.discrepancy.response.code">
+            <field name="name">Interests</field>
+            <field name="code">1</field>
+            <field name="type">in_refund</field>
+        </record>
+
+        <record id="account_invoice_discrepancy_response_code_in_refund_002" model="account.invoice.discrepancy.response.code">
+            <field name="name">Expenses receivable</field>
+            <field name="code">2</field>
+            <field name="type">in_refund</field>
+        </record>
+
+        <record id="account_invoice_discrepancy_response_code_in_refund_003" model="account.invoice.discrepancy.response.code">
+            <field name="name">Value change</field>
+            <field name="code">3</field>
+            <field name="type">in_refund</field>
+        </record>
+
+
+        <record id="account_invoice_discrepancy_response_code_in_refund_004" model="account.invoice.discrepancy.response.code">
+            <field name="name">Others</field>
+            <field name="code">4</field>
+            <field name="type">in_refund</field>
+        </record>
+
+
+
+
+
+    </data>
+
+</odoo>

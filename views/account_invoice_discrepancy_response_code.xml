@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="account_invoice_discrepancy_response_code_filter" model="ir.ui.view">
+            <field name="name">account.invoice.discrepancy.response.code.filter</field>
+            <field name="model">account.invoice.discrepancy.response.code</field>
+            <field name="arch" type="xml">
+                <search string="Search" name='search'>
+                    <field name="name" string="Method" filter_domain="[('name','ilike',self)]"/>
+                    <field name="code" string="Code" filter_domain="[('code','ilike',self)]"/>
+
+                    <group expand="0" string="Group By" name = 'group_by'>
+                        <filter string="Type" name='type' context="{'group_by':'type'}"/>
+                    </group>
+
+               </search>
+            </field>
+        </record>
+
+
+        <record id="account_invoice_discrepancy_response_code_form_view" model="ir.ui.view">
+            <field name="name">account.invoice.discrepancy.response.code.form.view</field>
+            <field name="model">account.invoice.discrepancy.response.code</field>
+            <field name="arch" type="xml">
+                <form string="Discrepancy Response Code">
+                    <group>
+                        <field name='name' required='1'/>
+                        <field name='code' required='1'/>
+                        <field name='type' required='1'/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="account_invoice_discrepancy_response_code_tree_view" model="ir.ui.view">
+            <field name="name">account.invoice.discrepancy.response.code.tree.view</field>
+            <field name="model">account.invoice.discrepancy.response.code</field>
+            <field name="arch" type="xml">
+                <tree string="Discrepancy Response Code">
+                    <field name='name'/>
+                    <field name='code'/>
+                    <field name='type'/>
+                </tree>
+            </field>
+        </record>
+
+
+
+        <record id="account_invoice_discrepancy_response_code_action" model="ir.actions.act_window">
+            <field name="name">Discrepancy Response Code</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">account.invoice.discrepancy.response.code</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="l10n_co_account_discrepancy_response.account_invoice_discrepancy_response_code_tree_view"/>
+            <field name="search_view_id" ref="l10n_co_account_discrepancy_response.account_invoice_discrepancy_response_code_filter"/>
+        </record>
+
+
+    </data>
+
+</odoo>
